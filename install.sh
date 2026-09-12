@@ -18,4 +18,4 @@ cp "$SRC/descriptor.mod" "$DST/mod/$NAME/descriptor.mod"
 { cat "$SRC/descriptor.mod"; printf 'path="mod/%s"\r\n' "$NAME"; } > "$DST/mod/$NAME.mod"
 
 echo "Установлено в $DST/mod/$NAME"
-echo "Дальше: включи 'Real Snow Without Advanced Shaders' в плейсете лаунчера (вместо Sharp Terrain)."
+echo "Дальше: включи 'Real Snow Without Advanced Shaders' в плейсете лаунчера НИЖЕ Sharp Terrain Without Advanced Shaders."

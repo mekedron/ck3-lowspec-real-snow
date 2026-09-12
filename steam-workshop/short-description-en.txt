@@ -1,1 +1,1 @@
-With Advanced Shaders off, CK3 paints winter as flat patchy blotches. This mod runs the real snow material in the low spec map: a solid cover with relief, sheen and frost. Includes Sharp Terrain.
+Add-on for Sharp Terrain: with Advanced Shaders off, the real snow material on the map, a solid cover with relief, sheen and frost instead of flat blotches. One options file.
