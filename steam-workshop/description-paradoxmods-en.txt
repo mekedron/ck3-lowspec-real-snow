@@ -1,0 +1,33 @@
+REAL SNOW WITHOUT ADVANCED SHADERS
+
+With the Advanced Shaders graphics option turned off, winter on the map is a flat, patchy paint job. This mod gives the low spec map the real snow: a solid cover with its own relief and sheen and a frost layer at the edges — while keeping the option off.
+
+It includes Sharp Terrain Without Advanced Shaders (https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542). Use one of the two, not both.
+
+THE CAUSE
+
+With Advanced Shaders off the terrain pixel shader draws snow with ApplySnowDiffuse(): three taps of the snow texture at different scales overlaid into a mask, thresholded by the province's winter severity and painted over the ground colour. No height blend, no normals, no roughness, no frost. With the option on, the game runs ApplySnowMaterialTerrain() instead, which blends a proper snow material into the ground the way the ground materials blend into each other.
+
+The expensive path never depended on anything the low spec shader lacks. It needs the per pixel detail height, normal and material — exactly what Sharp Terrain already computes and vanilla low spec throws away. So this mod is Sharp Terrain with one more call.
+
+WHAT IT COSTS
+
+About 4 ms of frame time where snow is possible, measured on a 4 GB laptop GPU at 5120x1440 in January; nothing in the south, where the snow mask lets the shader exit after one tap. On that machine the low spec 60 FPS held.
+
+NOTES
+
+- Keep Advanced Shaders off. With it on the game uses the high spec effect and this mod does nothing at all
+- Only the terrain is touched. Trees keep the snow their own shader gives them
+- Graphics-only: no gameplay, script or history files, so ironman and achievements are unaffected
+- Safe to add or remove at any time, including mid-campaign
+- The first map load after enabling is slower: the modified shader is compiled and cached from scratch
+- Built for CK3 1.19.x. Shader overrides replace the vanilla file wholesale, so a patch that reworks pdxterrain.shader will need an update here
+
+COMPATIBILITY
+
+Replaces gfx/FX/pdxterrain.shader in full — the same file as Sharp Terrain Without Advanced Shaders, which it contains; disable that one. Conflicts otherwise only with mods that edit that same file, mostly map graphics overhauls.
+
+SOURCE
+
+Full source on GitHub, including the exact change against the vanilla shader and an install script for Linux / Proton users:
+https://github.com/mekedron/ck3-lowspec-real-snow
