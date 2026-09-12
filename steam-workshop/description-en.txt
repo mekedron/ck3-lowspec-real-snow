@@ -1,5 +1,7 @@
 [h1]Real Snow Without Advanced Shaders[/h1]
 
+[b]Guide:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3800254441]CK3 on a potato PC: a locked 60 FPS, and the map still looks sharp[/url] — the full settings list these mods are built around, on a 4 GB laptop GPU at 5120x1440.
+
 With the [b]Advanced Shaders[/b] graphics option turned off, winter on the map is a flat, patchy paint job. This mod gives the low spec map the real snow: a solid cover with its own relief and sheen and a frost layer at the edges — while keeping the option off.
 
 This is an add-on for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542]Sharp Terrain Without Advanced Shaders[/url]: it needs that mod above it in the load order, and it is one small options file - no shader is duplicated.
