@@ -1,10 +1,10 @@
-REAL SNOW WITHOUT ADVANCED SHADERS
+Real Snow Without Advanced Shaders
 
-Guide: CK3 on a potato PC: a locked 60 FPS, and the map still looks sharp (https://steamcommunity.com/sharedfiles/filedetails/?id=3800254441) — the full settings list these mods are built around, on a 4 GB laptop GPU at 5120x1440.
+Guide: https://steamcommunity.com/sharedfiles/filedetails/?id=3800254441 — the full settings list these mods are built around, on a 4 GB laptop GPU at 5120x1440.
 
 With the Advanced Shaders graphics option turned off, winter on the map is a flat, patchy paint job. This mod gives the low spec map the real snow: a solid cover with its own relief and sheen and a frost layer at the edges — while keeping the option off.
 
-This is an add-on for Sharp Terrain Without Advanced Shaders (https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542): it needs that mod above it in the load order, and it is one small options file - no shader is duplicated.
+This is an add-on for https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542: it needs that mod above it in the load order, and it is one small options file - no shader is duplicated.
 
 THE CAUSE
 
@@ -29,7 +29,9 @@ COMPATIBILITY
 
 Contains a single file, gfx/FX/sharp_terrain_options.fxh, which overrides the options file of Sharp Terrain Without Advanced Shaders. Requires that mod, placed above this one. Conflicts with nothing else.
 
+On the map of A Game of Thrones Sharp Terrain needs STEAM_LINK_AGOT_PATCH below both; this add-on works through it unchanged.
+
 SOURCE
 
 Full source on GitHub, including the exact change against the vanilla shader and an install script for Linux / Proton users:
-github.com/mekedron/ck3-lowspec-real-snow (https://github.com/mekedron/ck3-lowspec-real-snow)
+https://github.com/mekedron/ck3-lowspec-real-snow

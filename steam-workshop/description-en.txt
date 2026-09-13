@@ -31,6 +31,8 @@ About 4 ms of frame time where snow is possible, measured on a 4 GB laptop GPU a
 
 Contains a single file, gfx/FX/sharp_terrain_options.fxh, which overrides the options file of Sharp Terrain Without Advanced Shaders. Requires that mod, placed above this one. Conflicts with nothing else.
 
+On the map of [b]A Game of Thrones[/b] Sharp Terrain needs [url=STEAM_LINK_AGOT_PATCH]Sharp Terrain & Better Water: A Game of Thrones Patch[/url] below both; this add-on works through it unchanged.
+
 [h2]Source[/h2]
 
 Full source on GitHub, including the exact change against the vanilla shader and an install script for Linux / Proton users:

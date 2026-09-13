@@ -1,10 +1,10 @@
-REAL SNOW WITHOUT ADVANCED SHADERS
+Real Snow Without Advanced Shaders
 
-Гайд: CK3 на калькуляторе: стабильные 60 FPS, и карта не мыло (https://steamcommunity.com/sharedfiles/filedetails/?id=3800254441) — полный список настроек, под который сделаны эти моды, на ноутбучной видеокарте с 4 ГБ при 5120x1440.
+Гайд: https://steamcommunity.com/sharedfiles/filedetails/?id=3800254441 — полный список настроек, под который сделаны эти моды, на ноутбучной видеокарте с 4 ГБ при 5120x1440.
 
 С выключенной настройкой «Дополнительные эффекты шейдеров» зима на карте — плоская пятнистая покраска. Этот мод даёт low-spec карте настоящий снег: сплошной покров со своим рельефом и блеском и слоем инея по краям — при по-прежнему выключенной настройке.
 
-Это дополнение к Sharp Terrain Without Advanced Shaders (https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542): ему нужен тот мод выше в порядке загрузки, а сам он — один маленький файл опций, шейдер не дублируется.
+Это дополнение к https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542: ему нужен тот мод выше в порядке загрузки, а сам он — один маленький файл опций, шейдер не дублируется.
 
 ПРИЧИНА
 
@@ -29,7 +29,9 @@ REAL SNOW WITHOUT ADVANCED SHADERS
 
 Содержит один файл, gfx/FX/sharp_terrain_options.fxh, который переопределяет файл опций Sharp Terrain Without Advanced Shaders. Требует тот мод, поставленный выше. Больше ни с чем не конфликтует.
 
+На карте A Game of Thrones Sharp Terrain нужен STEAM_LINK_AGOT_PATCH ниже обоих; это дополнение работает через него без изменений.
+
 ИСХОДНИКИ
 
 Полный исходный код на GitHub, включая точное изменение относительно ванильного шейдера и скрипт установки для Linux / Proton:
-github.com/mekedron/ck3-lowspec-real-snow (https://github.com/mekedron/ck3-lowspec-real-snow)
+https://github.com/mekedron/ck3-lowspec-real-snow
