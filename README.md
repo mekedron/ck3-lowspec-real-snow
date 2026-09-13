@@ -34,15 +34,23 @@ With Advanced Shaders off the terrain pixel shader normally calls
 `ApplyDynamicMasksDiffuse()` → `ApplySnowDiffuse()` (`game/gfx/FX/dynamic_masks.fxh`):
 three taps of the snow diffuse overlaid into a mask, thresholded by the province's
 winter severity and painted over the ground. With the option on, Sharp Terrain calls
-`ApplySnowMaterialTerrain()` instead - the high spec path - which blends a snow material
-into the per pixel detail height, normal and material, so snow gets its own relief and
-sheen, plus a frost layer at the edges.
+`ApplySnowMaterialTerrainCheap()` instead: vanilla's high spec `ApplySnowMaterialTerrain()`
+with every `SampleNoTile` (two texture reads plus a sine noise lookup, five of them per
+pixel) replaced by one plain read, and without a second heightmap read for the mountain
+term, since the pixel shader already has the world height. It blends the snow material
+into the per pixel detail height, normal and material the same way, so snow gets its
+own relief and sheen, plus a frost layer at the edges. About 7 texture reads per snow
+pixel instead of about 14 plus the noise math; the snow texture repeats at its tiling
+instead of being scrambled, which on a near uniform white texture is not visible.
+`TERRAINOPT_SNOW_MATERIAL_VANILLA` in the options file brings vanilla's function back,
+for comparing.
 
 ## Cost
 
-About **4 ms of frame time** where snow is possible, measured on an RTX 3050 Ti Laptop
-(4 GB) at 5120x1440 in January. Where the snow mask says "never snow" the shader exits
-after one tap. On that machine the low spec 60 FPS held with V-Sync on.
+The vanilla material cost about **4 ms of frame time** where snow is possible, measured
+on an RTX 3050 Ti Laptop (4 GB) at 5120x1440 in January, and noticeably more on a Mac;
+the cheap version does about half the texture reads and none of the noise math. Where
+the snow mask says "never snow" the shader exits after one tap.
 
 ## Layout
 
@@ -62,7 +70,8 @@ slower while the shader recompiles.
 
 ## Game version
 
-Built against 1.19.0.6 (Scribe) and Sharp Terrain 1.1. The file has no vanilla
+Built against 1.19.0.6 (Scribe) and Sharp Terrain 1.2 (the cheap snow function lives
+there, so 1.1 draws the vanilla material). The file has no vanilla
 counterpart, so game patches do not touch it; only a Sharp Terrain release that renames
 the option would.
 

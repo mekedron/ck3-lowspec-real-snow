@@ -4,17 +4,17 @@ Guide: https://steamcommunity.com/sharedfiles/filedetails/?id=3800254441 — the
 
 With the Advanced Shaders graphics option turned off, winter on the map is a flat, patchy paint job. This mod gives the low spec map the real snow: a solid cover with its own relief and sheen and a frost layer at the edges — while keeping the option off.
 
-This is an add-on for https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542: it needs that mod above it in the load order, and it is one small options file - no shader is duplicated.
+This is an add-on for https://steamcommunity.com/sharedfiles/filedetails/?id=3800159542: it needs that mod (1.2 or later) above it in the load order, and it is one small options file - no shader is duplicated.
 
 THE CAUSE
 
-With Advanced Shaders off the terrain pixel shader draws snow with ApplySnowDiffuse(): three taps of the snow texture at different scales overlaid into a mask, thresholded by the province's winter severity and painted over the ground colour. No height blend, no normals, no roughness, no frost. With the option on, the game runs ApplySnowMaterialTerrain() instead, which blends a proper snow material into the ground the way the ground materials blend into each other.
+With Advanced Shaders off the terrain pixel shader draws snow with ApplySnowDiffuse(): three taps of the snow texture at different scales overlaid into a mask, thresholded by the province's winter severity and painted over the ground colour. No height blend, no normals, no roughness, no frost. With the option on, the game runs ApplySnowMaterialTerrain() instead, which blends a proper snow material into the ground the way the ground materials blend into each other. That function reads the snow textures through a no-tile scrambler, two texture reads plus noise math per lookup, five lookups per pixel.
 
-The expensive path never depended on anything the low spec shader lacks. It needs the per pixel detail height, normal and material — exactly what Sharp Terrain already computes and vanilla low spec throws away. Sharp Terrain carries the call behind an option, and this mod switches the option on.
+The expensive path never depended on anything the low spec shader lacks. It needs the per pixel detail height, normal and material — exactly what Sharp Terrain already computes and vanilla low spec throws away. Sharp Terrain carries a cheap copy of that function behind an option — every no-tile lookup replaced by one plain read, and no second heightmap read — and this mod switches the option on. Same relief, sheen and frost; about 7 texture reads per snow pixel instead of about 14 plus the noise math. The vanilla function can be brought back from the options file for comparing.
 
 WHAT IT COSTS
 
-About 4 ms of frame time where snow is possible, measured on a 4 GB laptop GPU at 5120x1440 in January; nothing in the south, where the snow mask lets the shader exit after one tap. On that machine the low spec 60 FPS held.
+The vanilla material cost about 4 ms of frame time where snow is possible, measured on a 4 GB laptop GPU at 5120x1440 in January, and noticeably more on a Mac; the cheap version does about half the texture reads and none of the noise math. Nothing in the south, where the snow mask lets the shader exit after one tap.
 
 NOTES
 
