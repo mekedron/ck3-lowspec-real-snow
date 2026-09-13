@@ -35,11 +35,12 @@ With Advanced Shaders off the terrain pixel shader normally calls
 three taps of the snow diffuse overlaid into a mask, thresholded by the province's
 winter severity and painted over the ground. With the option on, Sharp Terrain calls
 `ApplySnowMaterialTerrainCheap()` instead: vanilla's high spec `ApplySnowMaterialTerrain()`
-with every `SampleNoTile` (two texture reads plus a sine noise lookup, five of them per
-pixel) replaced by one plain read, and without a second heightmap read for the mountain
-term, since the pixel shader already has the world height. It blends the snow material
+without the sine noise and derivative work of its five `SampleNoTile` lookups (the two
+mask lookups keep two averaged reads each, the three material lookups become one read
+each), and without a second heightmap read for the mountain term, since the pixel
+shader already has the world height. It blends the snow material
 into the per pixel detail height, normal and material the same way, so snow gets its
-own relief and sheen, plus a frost layer at the edges. About 7 texture reads per snow
+own relief and sheen, plus a frost layer at the edges. About 9 texture reads per snow
 pixel instead of about 14 plus the noise math; the snow texture repeats at its tiling
 instead of being scrambled, which on a near uniform white texture is not visible.
 `TERRAINOPT_SNOW_MATERIAL_VANILLA` in the options file brings vanilla's function back,
@@ -49,7 +50,7 @@ for comparing.
 
 The vanilla material cost about **4 ms of frame time** where snow is possible, measured
 on an RTX 3050 Ti Laptop (4 GB) at 5120x1440 in January, and noticeably more on a Mac;
-the cheap version does about half the texture reads and none of the noise math. Where
+the cheap version does fewer texture reads and none of the noise math. Where
 the snow mask says "never snow" the shader exits after one tap.
 
 ## Layout

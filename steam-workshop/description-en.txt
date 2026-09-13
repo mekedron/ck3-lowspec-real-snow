@@ -10,11 +10,11 @@ This is an add-on for [url=https://steamcommunity.com/sharedfiles/filedetails/?i
 
 With Advanced Shaders off the terrain pixel shader draws snow with ApplySnowDiffuse(): three taps of the snow texture at different scales overlaid into a mask, thresholded by the province's winter severity and painted over the ground colour. No height blend, no normals, no roughness, no frost. With the option on, the game runs ApplySnowMaterialTerrain() instead, which blends a proper snow material into the ground the way the ground materials blend into each other. That function reads the snow textures through a no-tile scrambler, two texture reads plus noise math per lookup, five lookups per pixel.
 
-The expensive path never depended on anything the low spec shader lacks. It needs the per pixel detail height, normal and material — exactly what Sharp Terrain already computes and vanilla low spec throws away. Sharp Terrain carries a cheap copy of that function behind an option — every no-tile lookup replaced by one plain read, and no second heightmap read — and this mod switches the option on. Same relief, sheen and frost; about 7 texture reads per snow pixel instead of about 14 plus the noise math. The vanilla function can be brought back from the options file for comparing.
+The expensive path never depended on anything the low spec shader lacks. It needs the per pixel detail height, normal and material — exactly what Sharp Terrain already computes and vanilla low spec throws away. Sharp Terrain carries a cheap copy of that function behind an option — the no-tile lookups replaced by plain reads, and no second heightmap read — and this mod switches the option on. Same relief, sheen and frost; about 9 texture reads per snow pixel instead of about 14 plus the noise math. The vanilla function can be brought back from the options file for comparing.
 
 [h2]What it costs[/h2]
 
-The vanilla material cost about 4 ms of frame time where snow is possible, measured on a 4 GB laptop GPU at 5120x1440 in January, and noticeably more on a Mac; the cheap version does about half the texture reads and none of the noise math. Nothing in the south, where the snow mask lets the shader exit after one tap.
+The vanilla material cost about 4 ms of frame time where snow is possible, measured on a 4 GB laptop GPU at 5120x1440 in January, and noticeably more on a Mac; the cheap version does fewer texture reads and none of the noise math. Nothing in the south, where the snow mask lets the shader exit after one tap.
 
 [h2]Notes[/h2]
 
