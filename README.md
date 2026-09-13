@@ -25,8 +25,8 @@ On its own this file is never read and the mod does nothing.
 
 On the map of **A Game of Thrones** Sharp Terrain needs
 [AGOT Patch for Sharp Terrain & Better Water](https://github.com/mekedron/ck3-lowspec-agot-patch) below both;
-the patch's terrain shader includes the same options file, so this add-on works there
-unchanged.
+the patch reads this add-on's option but does not act on it: AGOT's snow mask disables
+the snow material everywhere on that map, so the patch draws AGOT's own snow instead.
 
 ## What the option does
 
