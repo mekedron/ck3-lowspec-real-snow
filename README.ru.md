@@ -25,7 +25,7 @@ high-spec путь: сплошной покров со своим смешива
 Сам по себе файл никем не читается, и мод ничего не делает.
 
 На карте **A Game of Thrones** Sharp Terrain нужен
-[Sharp Terrain & Better Water: A Game of Thrones Patch](https://github.com/mekedron/ck3-lowspec-agot-patch) ниже обоих;
+[AGOT Patch for Sharp Terrain & Better Water](https://github.com/mekedron/ck3-lowspec-agot-patch) ниже обоих;
 шейдер ландшафта из патча подключает тот же файл опций, так что это дополнение работает
 там без изменений.
 

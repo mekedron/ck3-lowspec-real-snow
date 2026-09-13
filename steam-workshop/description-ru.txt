@@ -31,7 +31,7 @@
 
 Содержит один файл, gfx/FX/sharp_terrain_options.fxh, который переопределяет файл опций Sharp Terrain Without Advanced Shaders. Требует тот мод, поставленный выше. Больше ни с чем не конфликтует.
 
-На карте [b]A Game of Thrones[/b] Sharp Terrain нужен [url=STEAM_LINK_AGOT_PATCH]Sharp Terrain & Better Water: A Game of Thrones Patch[/url] ниже обоих; это дополнение работает через него без изменений.
+На карте [b]A Game of Thrones[/b] Sharp Terrain нужен [url=STEAM_LINK_AGOT_PATCH]AGOT Patch for Sharp Terrain & Better Water[/url] ниже обоих; это дополнение работает через него без изменений.
 
 [h2]Исходники[/h2]
 

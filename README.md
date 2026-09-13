@@ -24,7 +24,7 @@ Requires Sharp Terrain Without Advanced Shaders **above** this mod in the load o
 On its own this file is never read and the mod does nothing.
 
 On the map of **A Game of Thrones** Sharp Terrain needs
-[Sharp Terrain & Better Water: A Game of Thrones Patch](https://github.com/mekedron/ck3-lowspec-agot-patch) below both;
+[AGOT Patch for Sharp Terrain & Better Water](https://github.com/mekedron/ck3-lowspec-agot-patch) below both;
 the patch's terrain shader includes the same options file, so this add-on works there
 unchanged.
 
