@@ -31,7 +31,9 @@ The vanilla material cost about 4 ms of frame time where snow is possible, measu
 
 Contains a single file, gfx/FX/sharp_terrain_options.fxh, which overrides the options file of Sharp Terrain Without Advanced Shaders. Requires that mod, placed above this one. Conflicts with nothing else.
 
-On the map of [b]A Game of Thrones[/b] Sharp Terrain needs [url=STEAM_LINK_AGOT_PATCH]AGOT Patch for Sharp Terrain & Better Water[/url] below both; this add-on works through it unchanged.
+[h2]A Game of Thrones[/h2]
+
+On the map of [b]A Game of Thrones[/b] Sharp Terrain needs [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3800643356]AGOT Patch for Sharp Terrain & Better Water[/url] below both. This add-on has no effect on that map: AGOT's snow mask switches the snow material off everywhere, so the patch draws AGOT's own snow instead. Harmless to keep in the playset.
 
 [h2]Source[/h2]
 

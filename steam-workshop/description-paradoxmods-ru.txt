@@ -29,7 +29,9 @@ Real Snow Without Advanced Shaders
 
 Содержит один файл, gfx/FX/sharp_terrain_options.fxh, который переопределяет файл опций Sharp Terrain Without Advanced Shaders. Требует тот мод, поставленный выше. Больше ни с чем не конфликтует.
 
-На карте A Game of Thrones Sharp Terrain нужен STEAM_LINK_AGOT_PATCH ниже обоих; это дополнение работает через него без изменений.
+A GAME OF THRONES
+
+На карте A Game of Thrones Sharp Terrain нужен https://steamcommunity.com/sharedfiles/filedetails/?id=3800643356 ниже обоих. На этой карте дополнение ничего не делает: маска снега AGOT выключает материал снега везде, поэтому патч рисует собственный снег AGOT. Держать его в плейсете безвредно.
 
 ИСХОДНИКИ
 

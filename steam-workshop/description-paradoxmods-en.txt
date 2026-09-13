@@ -29,7 +29,9 @@ COMPATIBILITY
 
 Contains a single file, gfx/FX/sharp_terrain_options.fxh, which overrides the options file of Sharp Terrain Without Advanced Shaders. Requires that mod, placed above this one. Conflicts with nothing else.
 
-On the map of A Game of Thrones Sharp Terrain needs STEAM_LINK_AGOT_PATCH below both; this add-on works through it unchanged.
+A GAME OF THRONES
+
+On the map of A Game of Thrones Sharp Terrain needs https://steamcommunity.com/sharedfiles/filedetails/?id=3800643356 below both. This add-on has no effect on that map: AGOT's snow mask switches the snow material off everywhere, so the patch draws AGOT's own snow instead. Harmless to keep in the playset.
 
 SOURCE
 
