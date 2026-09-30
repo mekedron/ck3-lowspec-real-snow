@@ -71,8 +71,8 @@ slower while the shader recompiles.
 
 ## Game version
 
-Built against 1.19.0.6 (Scribe) and Sharp Terrain 1.2 (the cheap snow function lives
-there, so 1.1 draws the vanilla material). The file has no vanilla
+Built against 1.20.0.2 (Crozier) and Sharp Terrain 2.0 (the cheap snow function lives
+there). The file has no vanilla
 counterpart, so game patches do not touch it; only a Sharp Terrain release that renames
 the option would.
 
