@@ -8,6 +8,10 @@ cover with its own height blend, normal map, roughness and a frost layer.
 
 <img src="thumbnail.png" alt="The Baltic in January with Advanced Shaders off: patchy procedural snow in vanilla, a real snow cover with this mod" width="360">
 
+**All four in one:** Sharp Terrain, Real Snow, Better Water and Smooth Zoom Transitions
+also come as one mod, [All-in-One Map Pack Without Advanced Shaders](https://github.com/mekedron/ck3-lowspec-all-in-one) -
+optional, for the vanilla map, used instead of the separate mods.
+
 ## How it works
 
 The whole mod is one file, `gfx/FX/sharp_terrain_options.fxh`, containing

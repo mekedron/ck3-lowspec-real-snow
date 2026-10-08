@@ -9,6 +9,10 @@ high-spec путь: сплошной покров со своим смешива
 
 <img src="thumbnail.png" alt="Балтика в январе с выключенными шейдерами: пятнистый процедурный снег в ванили и сплошной снежный покров с модом" width="360">
 
+**Все четыре в одном:** Sharp Terrain, Real Snow, Better Water и Smooth Zoom Transitions
+есть и одним модом — [All-in-One Map Pack Without Advanced Shaders](https://github.com/mekedron/ck3-lowspec-all-in-one):
+необязательно, для ванильной карты, вместо отдельных модов.
+
 ## Как это работает
 
 Весь мод — один файл `gfx/FX/sharp_terrain_options.fxh`, в котором
