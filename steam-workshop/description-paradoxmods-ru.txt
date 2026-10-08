@@ -2,7 +2,7 @@ Real Snow Without Advanced Shaders
 
 Гайд: https://steamcommunity.com/sharedfiles/filedetails/?id=3800254441 — полный список настроек, под который сделаны эти моды, на ноутбучной видеокарте с 4 ГБ при 5120x1440.
 
-Все четыре в одном: Sharp Terrain, Real Snow, Better Water и Smooth Zoom Transitions есть и одним модом — https://steamcommunity.com/sharedfiles/filedetails/?id=ALL_IN_ONE_ID. Необязательно, для ванильной карты; вместо отдельных модов, а не вместе с ними.
+Все четыре в одном: Sharp Terrain, Real Snow, Better Water и Smooth Zoom Transitions есть и одним модом — https://steamcommunity.com/sharedfiles/filedetails/?id=3815911404. Необязательно, для ванильной карты; вместо отдельных модов, а не вместе с ними.
 
 С выключенной настройкой «Дополнительные эффекты шейдеров» зима на карте — плоская пятнистая покраска. Этот мод даёт low-spec карте настоящий снег: сплошной покров со своим рельефом и блеском и слоем инея по краям — при по-прежнему выключенной настройке.
 
